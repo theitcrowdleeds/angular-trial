@@ -18,6 +18,10 @@
   <br>
   Full Name: {{firstName + " " + lastName}}
 
+  <br>
+  <br>
+  <input style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">
+
 </div>
 
   <!-- Goes back into the html page looks up the models and gives them an initial value -->
@@ -26,6 +30,7 @@ var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope) {
     $scope.firstName= "John";
     $scope.lastName= "Doe";
+    $scope.myCol= "green";
 });
 </script>
 
