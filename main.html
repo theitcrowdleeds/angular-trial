@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+  <p><u>Simple String manipulation</u></p>
+  <p>Name : <input type="text" ng-model="name"></p>
+ 	<p>Name prints here {{name}}<p>
+
+  <p><u>Simple Maths Expression</u></p>
+ 	<p>My first expression: {{ 5 + 5 }}</p>
+
+  <p><u>Simple Model Instantiation</u></p>
+  First Name: <input type="text" ng-model="firstName"><br>
+  Last Name: <input type="text" ng-model="lastName"><br>
+  <br>
+  Full Name: {{firstName + " " + lastName}}
+
+</div>
+
+  <!-- Goes back into the html page looks up the models and gives them an initial value -->
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName= "John";
+    $scope.lastName= "Doe";
+});
+</script>
+
+</body>
+</html>
